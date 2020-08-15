@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sketch</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button id="size-button">Size of the canvas </button>
-    <div class="container-blocks"></div>
+    <div class="main">
+        <div class="menu">
+            <button id="size-button">Size</button>
+            <button id="clear-button">Clear</button>
+            <button id="eraser-button">Eraser</button>
+            <input type="checkbox" name="grid" id="grid-button"> Grid
+            <input type="color" class="color" value="#cd0033">
+        </div>
+        <div class="canvas">
+            <div class="blocks"></div>
+        </div>
+    </div>
 </body>
+<footer>
+    <a href="https://github.com/sebapkfd/sketch">Sebastian Soto</a></p>
+  </footer>
 <script src="app.js"></script>
 </html>

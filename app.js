@@ -1,5 +1,5 @@
-const blocksParent = document.querySelector('.container-blocks');
-blocksParent.setAttribute('styles', 'display: inline-grid')
+const blocksParent = document.querySelector('.blocks');
+blocksParent.setAttribute('styles', 'display: inline-grid') // add id and move every style to css
 let blockWidth = blocksParent.offsetWidth/16;
 let blockHeight = blocksParent.offsetHeight/16;
 
@@ -12,7 +12,7 @@ function createCanvas(userSelection = 4) {
         while (blocksParent.firstChild) {
             blocksParent.removeChild(blocksParent.firstChild);
         }
-        blocksParent.setAttribute('style', `grid-template-columns: repeat(${userSelection}, 1fr);`);
+        blocksParent.setAttribute('style', `grid-template-columns: repeat(${userSelection}, auto);`);
     }
     for (let i = 0; i < userSelection**2; i++) {
         const block = document.createElement('div');
@@ -45,3 +45,13 @@ buttonSize.addEventListener('click', () =>{
 })
 
 
+/*
+    refactoring Js code
+    Title
+    Eraser
+    Colors
+    Event listener
+    grid option
+    github link footer
+    clear grid
+*/

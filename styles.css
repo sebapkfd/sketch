@@ -1,8 +1,52 @@
-.container-blocks{
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(67, 122, 76);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.canvas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.colors{
+    width: 100%;
+    height: 80px;
+}
+
+.blocks{
     display: grid;
     grid-template-columns: auto auto auto auto;
     background-color: #2196F3;
-    padding: 10px;
     height: 500px;
-    width: 500px
+    width: 500px;
 }
+
+/* add icon */
+footer { 
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+    color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
