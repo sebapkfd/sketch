@@ -24,12 +24,23 @@ function createCanvas(userSelection = 4) {
 }
 
 
+// maybe user args to merge all color functions here
 function refreshListeners() {
     const blocks = document.querySelectorAll('.canvas-block');
+    // let colorBlock = document.getElementById('color-button').value;
     blocks.forEach((block) =>{
         block.addEventListener('click', () => {
-            block.style.backgroundColor = 'black';
+        let colorBlock = document.getElementById('color-button').value;
+            block.style.backgroundColor = colorBlock;
         })
+    })
+}
+
+// Might delete later
+function cleanCanvas(){
+    const blocks = document.querySelectorAll('.canvas-block');
+    blocks.forEach( (block) =>{
+        block.style.backgroundColor = 'white';
     })
 }
 
@@ -44,12 +55,14 @@ buttonSize.addEventListener('click', () =>{
     refreshListeners();
 })
 
+const cleaner = document.querySelector('#clear-button');
+
+cleaner.addEventListener('click',cleanCanvas);
 
 /*
     refactoring Js code
     Title
-    Eraser
-    Colors
+    cleaner
     Event listener
     grid option
     github link footer

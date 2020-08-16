@@ -6,7 +6,7 @@ body{
 .main{
     width: 50%;
     height: 100%;
-    background-color: blue;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -34,7 +34,7 @@ body{
 .blocks{
     display: grid;
     grid-template-columns: auto auto auto auto;
-    background-color: #2196F3;
+    background-color: rgb(255, 255, 255);
     height: 500px;
     width: 500px;
 }
@@ -49,4 +49,4 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-  }
+}
