@@ -73,14 +73,14 @@ button:hover{
 
 .blocks{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(6,auto);
     background-color: rgb(255, 255, 255);
     height: 500px;
     width: 100%;
 }
 
 .canvas-block{
-    border: grey solid; /* !important*/
+
 }
 
 footer { 

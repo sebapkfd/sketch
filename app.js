@@ -3,10 +3,10 @@ blocksParent.setAttribute('styles', 'display: inline-grid') // add id and move e
 let blockWidth = blocksParent.offsetWidth/16;
 let blockHeight = blocksParent.offsetHeight/16;
 
-function createCanvas(userSelection = 4) {
+function createCanvas(userSelection = 6) {
     userSelection = parseInt(userSelection, 10);
     if (Number.isInteger(userSelection) == false || userSelection < 1) {
-        userSelection = 4;
+        userSelection = 6;
     }
     if (blocksParent.firstChild != null){
         while (blocksParent.firstChild) {
@@ -16,7 +16,6 @@ function createCanvas(userSelection = 4) {
     }
     for (let i = 0; i < userSelection**2; i++) {
         const block = document.createElement('div');
-        // block.classList.add('canvas-block');
         block.setAttribute('class', 'canvas-block');
         block.setAttribute('id', `${i}`)
         block.setAttribute('style', `color: blue; background: white; height: ${blockHeight}; width: ${blockWidth}; border: none`);
@@ -25,7 +24,6 @@ function createCanvas(userSelection = 4) {
 }
 
 
-// maybe user args to merge all color functions here
 function refreshListeners() {
     const blocks = document.querySelectorAll('.canvas-block');
     let colorBlock;
@@ -37,14 +35,13 @@ function refreshListeners() {
     })
 }
 
-// Might delete later
+
 function cleanCanvas(){
     const blocks = document.querySelectorAll('.canvas-block');
     blocks.forEach( (block) =>{
         block.style.backgroundColor = 'white';
     })
 }
-
 
 createCanvas();
 const buttonSize = document.querySelector('#size-button');
@@ -59,10 +56,3 @@ buttonSize.addEventListener('click', () =>{
 const cleaner = document.querySelector('#clear-button');
 cleaner.addEventListener('click',cleanCanvas);
 
-
-/*
-    refactoring Js code
-    Title
-    cleaner
-    Event listener
-*/
