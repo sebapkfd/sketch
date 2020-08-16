@@ -16,9 +16,10 @@ function createCanvas(userSelection = 4) {
     }
     for (let i = 0; i < userSelection**2; i++) {
         const block = document.createElement('div');
-        block.classList.add('canvas-block');
+        // block.classList.add('canvas-block');
+        block.setAttribute('class', 'canvas-block');
         block.setAttribute('id', `${i}`)
-        block.setAttribute('style', `color: blue; background: white; height: ${blockHeight}; width: ${blockWidth}; border: solid black`);
+        block.setAttribute('style', `color: blue; background: white; height: ${blockHeight}; width: ${blockWidth}; border: none`);
         blocksParent.appendChild(block);   
     }
 }
@@ -45,8 +46,6 @@ function cleanCanvas(){
 }
 
 
-
-
 createCanvas();
 const buttonSize = document.querySelector('#size-button');
 
@@ -66,7 +65,4 @@ cleaner.addEventListener('click',cleanCanvas);
     Title
     cleaner
     Event listener
-    grid option
-    github link footer
-    clear grid
 */
