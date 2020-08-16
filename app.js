@@ -27,10 +27,10 @@ function createCanvas(userSelection = 4) {
 // maybe user args to merge all color functions here
 function refreshListeners() {
     const blocks = document.querySelectorAll('.canvas-block');
-    // let colorBlock = document.getElementById('color-button').value;
+    let colorBlock;
     blocks.forEach((block) =>{
         block.addEventListener('click', () => {
-        let colorBlock = document.getElementById('color-button').value;
+            colorBlock = document.getElementById('color-button').value;
             block.style.backgroundColor = colorBlock;
         })
     })
@@ -45,6 +45,8 @@ function cleanCanvas(){
 }
 
 
+
+
 createCanvas();
 const buttonSize = document.querySelector('#size-button');
 
@@ -56,8 +58,8 @@ buttonSize.addEventListener('click', () =>{
 })
 
 const cleaner = document.querySelector('#clear-button');
-
 cleaner.addEventListener('click',cleanCanvas);
+
 
 /*
     refactoring Js code
