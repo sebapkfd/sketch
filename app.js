@@ -1,7 +1,6 @@
 const blocksParent = document.querySelector('.blocks');
-blocksParent.setAttribute('styles', 'display: inline-grid') // add id and move every style to css
-let blockWidth = blocksParent.offsetWidth/16;
-let blockHeight = blocksParent.offsetHeight/16;
+const buttonSize = document.querySelector('#size-button');
+const cleaner = document.querySelector('#clear-button');
 
 function createCanvas(userSelection = 6) {
     userSelection = parseInt(userSelection, 10);
@@ -18,7 +17,6 @@ function createCanvas(userSelection = 6) {
         const block = document.createElement('div');
         block.setAttribute('class', 'canvas-block');
         block.setAttribute('id', `${i}`)
-        block.setAttribute('style', `color: blue; background: white; height: ${blockHeight}; width: ${blockWidth}; border: none`);
         blocksParent.appendChild(block);   
     }
 }
@@ -35,7 +33,6 @@ function refreshListeners() {
     })
 }
 
-
 function cleanCanvas(){
     const blocks = document.querySelectorAll('.canvas-block');
     blocks.forEach( (block) =>{
@@ -44,15 +41,12 @@ function cleanCanvas(){
 }
 
 createCanvas();
-const buttonSize = document.querySelector('#size-button');
-
 refreshListeners();
+
 buttonSize.addEventListener('click', () =>{
-    let userSelection = window.prompt('Which size of the Canvas do you want?', 4);
+    let userSelection = window.prompt('Which size of the Canvas do you want?', 6);
     createCanvas(userSelection);
     refreshListeners();
 })
 
-const cleaner = document.querySelector('#clear-button');
 cleaner.addEventListener('click',cleanCanvas);
-

@@ -1,13 +1,15 @@
 body{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-family: 'Varela Round', sans-serif;
     background-color: rgba(139, 219, 199, 0.397);
 }
 
 .main{
-    width: 50%;
-    height: 100%;
+    width: 45%;
+    /* height: 40% ; */
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
@@ -15,7 +17,7 @@ body{
     border-radius: 15px;
     box-shadow: 5px 5px 1px rgba(211, 208, 208, 0.527);
     color: rgb(15, 114, 109);
-    padding-top: 0px;
+    margin-bottom: 34px;
 }
 
 .title{
@@ -72,16 +74,18 @@ button:hover{
 }
 
 .blocks{
-    display: grid;
+    display: inline-grid;
     grid-template-columns: repeat(6,auto);
     background-color: rgb(255, 255, 255);
-    height: 500px;
+    height: 450px;
     width: 100%;
 }
 
 .canvas-block{
-
+    background-color: white;
+    border: none;
 }
+
 
 footer { 
     text-align: center;
@@ -92,4 +96,5 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+    margin-top: auto;
 }
